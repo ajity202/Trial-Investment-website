@@ -1,122 +1,177 @@
 import {
+  BarChart3,
   BrainCircuit,
-  TrendingUp,
-  ShieldAlert,
+  FileText,
+  Mic,
   Newspaper,
-  Wallet,
-  FileSearch,
+  ShieldAlert,
+  ArrowRight,
 } from "lucide-react";
 
 export default function Features() {
   const features = [
-    {
-      icon: BrainCircuit,
-      title: "AI-Powered Analysis",
-      description:
-        "Get structured stock research powered by AI in under 60 seconds.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Positive vs Negative Signals",
-      description:
-        "Instantly identify strengths and risks of any company.",
-    },
-    {
-      icon: Newspaper,
-      title: "News Sentiment Analysis",
-      description:
-        "Track bullish, bearish and neutral sentiment from market news.",
-    },
-    {
-      icon: Wallet,
-      title: "Financial Health Assessment",
-      description:
-        "Analyze revenue growth, profit trends and cash flow instantly.",
-    },
-    {
-      icon: ShieldAlert,
-      title: "Risk Identification",
-      description:
-        "Understand potential risks before making investment decisions.",
-    },
-    {
-      icon: FileSearch,
-      title: "Source-Based Insights",
-      description:
-        "Every insight is backed by trusted financial and market data.",
-    },
-  ];
-
+  {
+    icon: BarChart3,
+    title: "Financial Analysis",
+    description:
+      "Analyze revenue, profitability, balance sheet, cash flow and key financial ratios in seconds.",
+  },
+  {
+    icon: Mic,
+    title: "Earnings Call Intelligence",
+    description:
+      "AI reads lengthy earnings call transcripts and highlights the most important management insights.",
+  },
+  {
+    icon: Newspaper,
+    title: "News Intelligence",
+    description:
+      "Track market-moving news and identify bullish, bearish and neutral sentiment instantly.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Risk Detection",
+    description:
+      "Identify financial, governance and operational risks before making investment decisions.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "AI Investment Score",
+    description:
+      "Every company receives a structured AI score based on multiple financial and qualitative factors.",
+  },
+  {
+    icon: FileText,
+    title: "Professional Reports",
+    description:
+      "Download structured research reports that are easy to understand and backed by trusted data.",
+  },
+];
   return (
     <section className="bg-slate-950 text-white py-24">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}
 
-        <div className="text-center">
+        {/* Heading */}
 
-          <p className="text-green-400 font-semibold uppercase tracking-widest text-sm">
-            Powerful Features
-          </p>
+<div className="text-center">
 
-          <h2 className="text-4xl font-bold mt-3">
-            Everything You Need To Analyze Stocks Faster
-          </h2>
+  <p className="text-green-400 font-semibold uppercase tracking-[0.2em] text-sm">
+    AI Capabilities
+  </p>
 
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            Stock Guru AI combines financial analysis,
-            market sentiment and risk assessment into a
-            single easy-to-understand report.
-          </p>
+  <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold">
+    AI Research Designed for Smarter Investing
+  </h2>
 
-        </div>
+  <p className="mt-6 text-slate-400 max-w-3xl mx-auto text-base sm:text-lg leading-7">
+    Stock Guru AI combines financial statements,
+    earnings calls, market news and AI-powered
+    reasoning into one comprehensive investment
+    research platform.
+  </p>
+
+</div>
 
         {/* Feature Grid */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 mt-16">
 
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
               <div
-                key={index}
-                className="
-                  bg-white/5
-                  border
-                  border-white/10
-                  rounded-3xl
-                  p-8
-                  hover:border-green-500/40
-                  hover:shadow-2xl
-                  hover:-translate-y-2
-                  transition-all
-                  duration-300
-                "
-              >
+  key={index}
+  className="
+    group
+    relative
+    overflow-hidden
+    rounded-3xl
+    border
+    border-white/10
+    bg-white/5
+    p-7 lg:p-8
+    transition-all
+    duration-500
+    hover:-translate-y-2
+    hover:border-green-500/40
+    hover:shadow-2xl
+    hover:shadow-green-500/10
+  "
+>
 
-                <div className="
-                  h-14
-                  w-14
-                  rounded-2xl
-                  bg-green-500/10
-                  flex
-                  items-center
-                  justify-center
-                ">
-                  <Icon className="h-7 w-7 text-green-400" />
-                </div>
+  {/* Icon */}
 
-                <h3 className="text-xl font-semibold mt-6">
-                  {feature.title}
-                </h3>
+  <div className="
+    h-16
+    w-16
+    rounded-2xl
+    bg-green-500/10
+    flex
+    items-center
+    justify-center
+    transition
+    duration-500
+    group-hover:bg-green-500
+  ">
 
-                <p className="text-slate-400 mt-4 leading-relaxed">
-                  {feature.description}
-                </p>
+    <Icon className="h-8 w-8 text-green-400 group-hover:text-black transition" />
 
-              </div>
-            );
+  </div>
+
+  {/* Title */}
+
+  <h3 className="text-2xl font-semibold mt-7">
+    {feature.title}
+  </h3>
+
+  {/* Description */}
+
+  <p className="text-slate-400 mt-4 leading-8">
+    {feature.description}
+  </p>
+
+  {/* Bottom */}
+
+  <div className="mt-8 flex items-center justify-between">
+
+    <span className="text-green-400 text-sm font-medium">
+      Learn More
+    </span>
+
+    <ArrowRight
+      className="
+        h-5
+        w-5
+        text-green-400
+        transition-transform
+        duration-300
+        group-hover:scale-110
+        group-hover:text-black
+      "
+    />
+
+  </div>
+
+  {/* Bottom Accent */}
+
+  <div className="
+    absolute
+    bottom-0
+    left-0
+    h-1
+    w-0
+    bg-gradient-to-r
+    from-green-400
+    to-emerald-300
+    transition-all
+    duration-500
+    group-hover:w-full
+  " />
+
+</div>            );
           })}
 
         </div>
